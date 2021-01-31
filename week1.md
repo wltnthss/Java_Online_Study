@@ -12,6 +12,9 @@
 - JVM 구성 요소
 - JDK와 JRE의 차이
 ### 1-1 JVM이란 무엇인가?
-<img src="http://www.tcpschool.com/lectures/img_java_jvm.png" width="500" height="300"> 
+
+JVM이란 Jave Virtual Machine의 약어로 자바 바이트코드를 실행시키기 위한 가상의 기계로 정의합니다.
+
+<img src="http://www.tcpschool.com/lectures/img_java_jvm.png" width="500" height="300"> <br>
 출처 : <http://www.tcpschool.com/java/java_intro_programming>
 
