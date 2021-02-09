@@ -187,3 +187,11 @@ var = name = new ArrayList<>();   //error 발생
 
 ### 후기 및 느낀점
 각각의 기본형과 참조형 변수가 어떻게 저장되어지는 이해했지만, 정확히 어느 메모리에 저장되어지는지에 대해 추가 정리 필요 전체적인 개념을 한 번 더 정리하며 메모리 구조에 대해 정리해보자.
+
+<img src = "http://www.tcpschool.com/lectures/img_java_memory_structure.png" width = "300" height = "400"> <br>
+출처 : <http://www.tcpschool.com/java/java_array_memory>   
+메소드 영역은 자바 프로그램내에서 사용되는 static 변수가 저장되는 영역입니다. static은 자바 프로그램 시작 시 별도로 메모리에 생성되는데 이 생성되는 영역을 메소드 영역이라고 말합니다.
+
+힙 영역은 모든 인스턴스 변수가 저장되는 영역이며 new 키워드를 사용함으로써 해당 인스턴스의 정보(주소)를 힙 영역에 저장합니다.
+
+스택 영역은 push로 데이터를 저장, pop으로 데이터를 출력하며 LIFO방식으로 동작합니다. 객체 인스턴스의 주소를 저장하는 힙 영역과 달리 스택 영역에는 static,힙을 제외한 지역변수와 매개변수가 저장됩니다.
