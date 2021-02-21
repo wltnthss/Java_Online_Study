@@ -80,7 +80,39 @@ JUnit5에는 `@Test`와 같이 메소드 위에 선언되면 테스트 대상 �
 
 
 
-### 1-3 LinkedLikst 구현
+### 1-3 LinkedList 구현
+#### 목표
+- LinkedList 공부하기
+- 정수를 저장하는 ListNode 클래스 구현
+- ListNode add(ListNode head, ListNode nodeToAdd, int position)
+- ListNode remove(ListNode head, int postionToRemove)
+- boolean contains(ListNode head, ListNode nodeToCheck)
+
+**LinkedList**란 각 노드가 데이터와 포인터를 가지고 한 줄로 연결되어 있는 방식으로 데이터를 저장하는 자료구조이다. 일반적으로 LinkedList는 노드(Node)와 링크(Link)로 구성되어있다. 
+
+`노드` : 실제 정보를 담고 있는 하나의 단위이다.   
+`링크` : 노드간의 위치정보를 저장하고 있어 연결리스트 순서를 유지할 수 있도록 하는 연결고리이다.
+
+노드의 시작점은 head, 끝점은 tail이라 부르며 노드의 추가, 삭제, 탐색이 가능하다.
+
+<img src="https://postfiles.pstatic.net/MjAyMDEyMDFfMjU2/MDAxNjA2Nzk3NDA4OTUy.2vXZPVs0TxU4EY3SVip7YHQTL2Vs1fZl9pYvXetXnHgg.rhiZXuoyBBs81HDVW7AkSJleEvevaV_Jji_GQbu7BIEg.PNG.swoh1227/1.PNG?type=w773" width="600" height="200">
+출처 : <https://blog.naver.com/swoh1227/222161294264>
+
+연결리스트(LinkedList)는 위의 그림과 같이 노드와 링크로 구성되어있다는 것을 알아두자.
+
+#### 연결 리스트 특징
+(1) 배열에 비해서 삽입/삭제가 용이합니다.
+배열은 데이터의 길이를 정해두고 사용하고 중간 데이터를 삭제하거나 삽입하려면 빈 공간을 남기거나 기존 데이터를 밀어내야합니다. 하지만 연결 리스트는 링크를 통해 주솟값을 가지고 있어서 주소값만 변경해주면 됩니다.
+
+(2) 탐색을 위해서는 첫번째 노드부터 비교해야하므로 검색속도가 느리다는 단점을 가지고 있습니다.
+
+#### 연결 리스트 종류
+연결 리스트는 단일 연결 리스트, 원형 연결 리스트, 이중 연결 리스트 세 가지의 종류가 있습니다.
+위의 사진과 같은 경우가 단일 연결 리스트입니다.
+- 원형 연결 리스트 : 마지막 노드 위치를 null이 아닌 맨 처음 노드를 가르키는 형태입니다.
+- 이중 연결 리스트 :  하나의 노드에 이전 노드와 다음 노드의 위치를 둘 다 저장하는 형태입니다.
+
+#### 구현
 
 
 ### 1-4 Stack 구현
