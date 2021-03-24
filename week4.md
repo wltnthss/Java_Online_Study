@@ -111,17 +111,64 @@ JUnit5에는 `@Test`와 같이 메소드 위에 선언되면 테스트 대상 �
 - 원형 연결 리스트 : 마지막 노드 위치를 null이 아닌 맨 처음 노드를 가르키는 형태입니다.
 - 이중 연결 리스트 :  하나의 노드에 이전 노드와 다음 노드의 위치를 둘 다 저장하는 형태입니다.
 
-#### 정수를 저장하는 ListNode 클래스 구현
+```java
+package list_LinkedList;
 
+public class LinkedList {
+	// 첫번째 노드 변수
+	private Node head;
+	private Node tail;
+	private int size = 0;
+	private class Node{
+		// 데이터 저장영역 변수
+		private Object data;
+		// 다음 노드를 가르키는 변수
+		private Node next;
+		public Node(Object input) {
+			this.data = input;
+			this.next = null;
+		}
 
-#### ListNode add(ListNode head, ListNode nodeToAdd, int position) 구현
-
-
-#### ListNode remove(ListNode head, int postionToRemove) 구현
-
-
-#### boolean contains(ListNode head, ListNode nodeToCheck) 구현
-
+		// 노드 내용 출력 확인 함수
+		public String toString() {
+			return String.valueOf(this.data);
+		}
+	}
+	public void addFirst(Object input) {
+		// 노드 생성
+		Node newNode = new Node(input);
+		// 새로운 노드의 다음 노드 헤드 지정.
+		newNode.next = head;
+		// 헤드로 새로운 노드 지정
+		head = newNode;
+		size++;
+		if(head.next == null) {
+			tail = head;
+		}
+	}
+	public void addLast(Object input) {
+		// 노드 생성
+		Node newNode = new Node(input);
+		// 리스트의 노드가 없다면 첫번째 노드를 추가하는 메소드를 사용합니다.
+		if(size == 0) {
+			addFirst(input);
+		} else {
+			// 마지막 노드의 다음 노드로 생성한 노드를 지정합니다.
+			tail.next = newNode;
+			// 마지막 노드를 갱신합니다.
+			tail = newNode;
+			// 엘리먼트 개수 1증가
+			size++;
+		}
+	}
+	Node node(int index) {
+		Node x = head;
+		for(int i=0; i<index; i++)
+			x = x.next;
+		return x;
+	}
+}
+```
 
 
 ### 1-4 Stack 구현
